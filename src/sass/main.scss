@@ -13,32 +13,44 @@
 @import "pages/home";
 
 .card {
+  box-sizing: border-box;
   width: 350px;
   height: 596px;
   padding: 24px 24px 32px;
   background-color: $dark-blue-900;
   border-radius: 15px;
+  margin-bottom: 25px;
 
   &-image {
-    width: 100%;
+    width: 302px;
+    height: 302px;
     border-radius: 8px;
-    background-color: rgb(0, 255, 248);
-    mix-blend-mode: lighten;
+    background: url("../images/image-equilibrium.jpg");
+    background-size: cover;
 
-    &:hover + .card-image-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transition: 400ms;
+      background: rgba(0, 255, 248, 0.43) url("../images/image-equilibrium.jpg");
+      background-blend-mode: overlay;
+      background-size: cover;
+    }
+
+    &:hover > .card-image-view {
+      transition: 600ms;
       transform: scale(1.15);
       display: block;
     }
+
     &-container {
       position: relative;
     }
 
     &-view {
       display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 
