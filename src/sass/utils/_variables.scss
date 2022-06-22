@@ -1,0 +1,22 @@
+$width-map: (
+        sm:640px,
+        md:768px,
+        lg:1024px,
+        xl:1280px,
+        xxl:1536px,
+        mobile: 375px,
+        desktop: 1440px
+);
+
+$dark-blue: hsl(217, 54%, 11%);
+$dark-blue-900: hsl(216, 50%, 16%);
+$dark-blue-800: hsl(215, 32%, 27%);
+
+/*
+
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+**/

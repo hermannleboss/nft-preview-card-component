@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit");
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/extensions";
+
+@import "base/base";
+@import "base/display";
+@import "base/typography";
+
+@import "layout/container";
+
+@import "pages/home";
+
+.card {
+  width: 350px;
+  height: 596px;
+  padding: 24px 24px 32px;
+  background-color: $dark-blue-900;
+  border-radius: 15px;
+
+  &-image {
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(0, 255, 248);
+    mix-blend-mode: lighten;
+
+    &:hover + .card-image-view{
+      transform: scale(1.15);
+      display: block;
+    }
+    &-container {
+      position: relative;
+    }
+
+    &-view {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-eth {
+    & > img {
+      margin-right: 8px;
+    }
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    color: #00FFF8; //styleName: Caption (Bold);
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+
+  }
+
+  &-clock {
+    & > img {
+      margin-right: 8px;
+    }
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #8BACD9;
+    //styleName: Caption;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: $dark-blue-800 solid 1px;
+    margin-bottom: 16px;
+  }
+
+  &-author {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    & > img {
+      width: 33px;
+      height: 33px;
+      margin-right: 16px;
+    }
+
+    color: #8BACD9;
+
+    & > a {
+      margin-left: 5px;
+    }
+  }
+}
